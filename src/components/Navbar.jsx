@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-purple-200 via-white to-white px-4 py-2">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center md:gap-5">
         <div className="font-bold text-2xl">
           <span className="text-black">BOOM events</span> 
         </div>
@@ -32,7 +32,7 @@ const Navbar = () => {
 
         {/* Hamburger for mobile */}
         <div className="md:hidden flex items-center">
-          <button onClick={() => setIsOpen(!isOpen)}>
+          <button className='text-black' onClick={() => setIsOpen(!isOpen)}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
@@ -52,7 +52,7 @@ const Navbar = () => {
           </ul>
 
           <div className="flex flex-col space-y-4 mt-4 items-start">
-            <div className="flex items-center">
+            <div className="flex items-center text-black">
               <span>EN</span>
               <span className="ml-1">▼</span>
             </div>
