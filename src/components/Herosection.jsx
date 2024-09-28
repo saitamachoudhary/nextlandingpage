@@ -2,33 +2,30 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-const logos = [
-  'https://marketing-cdn.tickettailor.com/Zh0xYzjCgu4jz00S_SwanTrailsFarm.png?auto=format%2Ccompress&fit=max&w=640',
-  'https://marketing-cdn.tickettailor.com/Zh0xYDjCgu4jz00P_TunesFestival.png?auto=format%2Ccompress&fit=max&w=640',
-  'https://marketing-cdn.tickettailor.com/Zh0xazjCgu4jz00a_BristolFilmFestival.png?auto=format%2Ccompress&fit=max&w=640',
-  'https://marketing-cdn.tickettailor.com/Zh0xajjCgu4jz00Z_DanceWorldCup.png?auto=format%2Ccompress&fit=max&w=1920',
-  'https://marketing-cdn.tickettailor.com/Zh0xaDjCgu4jz00X_IMAX.png?auto=format%2Ccompress&fit=max&w=1200',
-  'https://marketing-cdn.tickettailor.com/Zh0xYjjCgu4jz00R_TEDx.png?auto=format%2Ccompress&fit=max&w=1920',
-  'https://marketing-cdn.tickettailor.com/Zh0xajjCgu4jz00Z_DanceWorldCup.png?auto=format%2Ccompress&fit=max&w=640',
-  'https://marketing-cdn.tickettailor.com/Zh0xaTjCgu4jz00Y_DarkMatter.png?auto=format%2Ccompress&fit=max&w=1920'
-];
+
 
 const Herosection = () => {
+  const [inputvalue,setinputvalue]= useState("");
   return (
     <div className='w-full px-4 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-full mx-auto text-black'>
       <div className="heroLeft_section">
         <h1 className='text-4xl md:text-6xl font-semibold'>The world's most loved ticketing platform.</h1>
         <p className='text-base md:text-lg text-slate-700 my-4 md:my-6'>Whether it’s your first event ever, or your biggest event yet, we make it simple to sell tickets online.</p>
-        <div className='heroform_section flex gap-4'>
-          <div className="inputgroup relative rounded-full overflow-hidden bg-white shadow-xl w-72">
+        <div className='heroform_section flex lg:flex-row md:flex-row sm:flex-row flex-col gap-4'>
+          <div className="inputgroup relative rounded-full overflow-hidden bg-white shadow-xl lg:w-96 md:w-96 sm:w-96 w-auto">
             <input
               className="input bg-transparent outline-none border-none pl-6 pr-10 py-5 w-full font-sans text-lg font-semibold"
               placeholder="Enter your email"
               name="text"
               type="email"
+              onChange={(e)=>setinputvalue(e.target.value)}
+              value={inputvalue}
             />
             <div className="absolute right-2 top-[0.4em]">
-              <button className="w-14 h-14 rounded-full bg-[#7E22CE] group shadow-xl flex items-center justify-center relative overflow-hidden">
+              <button onClick={()=>{
+             alert(`Email: ${inputvalue} registered successfully we will reach you soon`);
+             setinputvalue("")
+          }} className="w-14 h-14 rounded-full bg-[#7E22CE] group shadow-xl flex items-center justify-center relative overflow-hidden">
                 <svg
                   className="relative z-10"
                   xmlns="http://www.w3.org/2000/svg"
@@ -72,31 +69,6 @@ const Herosection = () => {
       </div>
       <div className="heroRight_section">
         <ShuffleGrid />
-      </div>
-      <div className="hero_logos relative overflow-hidden py-8 md:py-12 col-span-2">
-        <h3 className="text-center text-xl sm:text-2xl md:text-3xl font-normal mb-4 md:mb-6">
-          Trusted by the world’s biggest brands
-        </h3>
-        <div className="flex space-x-4 sm:space-x-8 animate-scroll-left">
-          {logos.map((logo, index) => (
-            <img
-              key={index}
-              src={logo}
-              alt={`Logo ${index + 1}`}
-              className="h-10 sm:h-12 md:h-16 w-auto"
-            />
-          ))}
-        </div>
-        <div className="flex space-x-4 sm:space-x-8 animate-scroll-right mt-6 md:mt-8">
-          {logos.map((logo, index) => (
-            <img
-              key={index}
-              src={logo}
-              alt={`Logo ${index + 1}`}
-              className="h-10 sm:h-12 md:h-16 w-auto"
-            />
-          ))}
-        </div>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 
-const Navbar = () => {
+const Navbar = ({OpenLoginmodal}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -11,7 +11,6 @@ const Navbar = () => {
           <span className="text-black">BOOM events</span> 
         </div>
 
-        {/* Menu for large screens */}
         <ul className="hidden md:flex space-x-6">
           <li><a href="#home" className="text-black hover:text-purple-600">Home</a></li>
           <li><a href="#pricing" className="text-black hover:text-purple-600">Pricing</a></li>
@@ -20,17 +19,15 @@ const Navbar = () => {
           <li><a href="#marketing" className="text-black hover:text-purple-600">Marketing</a></li>
         </ul>
 
-        {/* Right Section */}
         <div className="hidden md:flex items-center space-x-6">
           <div className="flex items-center text-black">
             <span>EN</span>
             <span className="ml-1">▼</span>
           </div>
-          <a href="#login" className="text-black">Log in</a>
+          <a href="#login" className="text-black" onClick={OpenLoginmodal}>Log in</a>
           <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">Start for FREE</button>
         </div>
 
-        {/* Hamburger for mobile */}
         <div className="md:hidden flex items-center">
           <button className='text-black' onClick={() => setIsOpen(!isOpen)}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +37,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden">
           <ul className="flex flex-col space-y-4 mt-4">

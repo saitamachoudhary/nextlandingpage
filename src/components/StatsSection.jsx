@@ -2,7 +2,7 @@ import React from 'react';
 
 const StatsSection = () => {
   return (
-    <div className="bg-white text-center py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white text-center py-8 px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         Meet the rising demand
       </h2>
