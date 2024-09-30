@@ -9,7 +9,7 @@ const Herosection = () => {
   return (
     <div className='w-full px-4 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-full mx-auto text-black'>
       <div className="heroLeft_section">
-        <h1 className='text-4xl md:text-6xl font-semibold'>The world's most loved ticketing platform.</h1>
+        <h1 className='text-4xl md:text-6xl font-semibold'>The world&#39;s most loved ticketing platform.</h1>
         <p className='text-base md:text-lg text-slate-700 my-4 md:my-6'>Whether it’s your first event ever, or your biggest event yet, we make it simple to sell tickets online.</p>
         <div className='heroform_section flex lg:flex-row md:flex-row sm:flex-row flex-col gap-4'>
           <div className="inputgroup relative rounded-full overflow-hidden bg-white shadow-xl lg:w-96 md:w-96 sm:w-96 w-auto">
@@ -177,16 +177,18 @@ const ShuffleGrid = () => {
   const [squares, setSquares] = useState(generateSquares());
 
   useEffect(() => {
+
+    const shuffleSquares = () => {
+      setSquares(generateSquares());
+  
+      timeoutRef.current = setTimeout(shuffleSquares, 3000);
+    };
     shuffleSquares();
 
     return () => clearTimeout(timeoutRef.current);
   }, []);
 
-  const shuffleSquares = () => {
-    setSquares(generateSquares());
 
-    timeoutRef.current = setTimeout(shuffleSquares, 3000);
-  };
 
   return (
     <div className="grid grid-cols-4 grid-rows-4 h-[450px] gap-1">
