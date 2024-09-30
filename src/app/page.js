@@ -7,7 +7,7 @@ import TestimonialSection from "@/components/TestimonialSection";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import Logos from "@/components/logos";
+import Logos from "@/components/Logos";   
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Form from "@/components/Form";
