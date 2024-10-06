@@ -1,54 +1,63 @@
-import React from "react";
-
-const testimonials = [
-  {
-    logo: "https://cdn.evbstatic.com/s3-build/fe/build/images/caebfb773df2d86560078a89ea1718d2-mamas-nightmarket.svg",
-    company: "MAMA's Nightmarket",
-    quote:
-      "For people coming to our event outside of San Francisco, nearly 70% of our attendees say they found it on Eventbrite.",
-  },
-  {
-    logo: "https://cdn.evbstatic.com/s3-build/fe/build/images/a7f5cc2f20ebf4b2044c38d1a63866d2-Seed-talks.svg",
-    company: "Seed Talks",
-    quote:
-      "The conversion rate on Eventbrite was 20% better than other ticketing platforms…plus the automated emails generate a lot of new sales each time we post a new event.",
-  },
-  {
-    logo: "https://cdn.evbstatic.com/s3-build/fe/build/images/759f69873f707c14793eb7baa0e56a32-something-dope-for-the-people.svg",
-    company: "Something Dope for the People",
-    quote:
-      "We rely on Eventbrite for its discoverability and we're gaining followers. I can't think of an event where it wouldn't make sense to be using Eventbrite's marketing tools.",
-  },
-];
+'use client'
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination, Autoplay} from 'swiper/modules';
 
 const TestimonialSection = () => {
-  return (
-    <section className="py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-          Hear what our organizers are saying
-        </h2>
+  const testimonialData = [
+    { id: 1, title: 'Your next credit card', tickets: '24', image: 'https://plus.unsplash.com/premium_photo-1681533650863-6a3cd8a77977?q=80&w=1729&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+    { id: 2, title: 'Get rewards instantly', tickets: '15', image: 'https://media.istockphoto.com/id/1289221809/photo/woman-using-cashback-app-on-phone.jpg?s=1024x1024&w=is&k=20&c=-NJ0C_OCG0zRSZPme9TzjDAz7pW4dNkoEQCTExHyNB4=' },
+    { id: 3, title: 'Exclusive deals', tickets: '30', image: 'https://plus.unsplash.com/premium_photo-1664201889896-6a42c19e953a?q=80&w=1836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+    { id: 4, title: 'Your next events tickets here', tickets: '24', image: 'https://media.istockphoto.com/id/1130434203/photo/rear-view-of-sitting-audience.jpg?s=1024x1024&w=is&k=20&c=7ofKG5GgvZM7ncAFjCJACp1GQIKcdx5xZ_qOh4e4l-w=' },
+    { id: 5, title: 'Order meals during events', tickets: '15', image: 'https://images.unsplash.com/photo-1512034400317-de97d7d6c3ed?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  ];
 
-        <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              <img
-                src={testimonial.logo}
-                alt={testimonial.company}
-                className="h-12 w-12 mb-4 rounded-full"
-              />
-              <p className="text-lg font-medium text-gray-900">
-                {testimonial.quote}
-              </p>
-              <p className="mt-4 text-base font-semibold text-indigo-600">
-                {testimonial.company}
-              </p>
+  return (
+    <div className="bg-white text-black py-10">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        // pagination={{ clickable: true }}
+        autoplay={{ delay: 3000 }}
+        loop
+      >
+        {testimonialData.map((testimonial) => (
+          <SwiperSlide key={testimonial.id}>
+            <div className="bg-black text-white p-6 rounded-lg max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+              {/* Left section with text */}
+              <div className="md:w-1/2 space-y-4">
+                <h2 className="text-2xl md:text-4xl font-bold">{testimonial.title}</h2>
+                <p className="text-xl md:text-3xl font-semibold text-yellow-500">
+                  gets you <span className="text-4xl">{testimonial.tickets} free*</span> tickets!
+                </p>
+                <button className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg hover:bg-red-600">
+                  Apply Now
+                </button>
+                <p className="text-sm text-gray-400">*T&Cs Apply</p>
+              </div>
+
+              {/* Right section with image */}
+              <div className="md:w-1/2 flex justify-center">
+                <img
+                  src={testimonial.image}
+                  alt="Credit Card"
+                  className="w-full md:w-3/4 rounded-lg shadow-lg"
+                />
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 
 export default TestimonialSection;
+
+
+

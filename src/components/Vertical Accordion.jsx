@@ -8,8 +8,8 @@ const VerticalAccordion = () => {
   const [open, setOpen] = useState(items[0].id);
 
   return (
-    <section className="p-4 bg-[#9333EA]">
-      <h1 className='text-4xl md:text-6xl font-semibold text-center'>Why use Ticket Tailor?</h1>
+    <section className="p-4 bg-gray-50">
+      <h1 className='text-4xl md:text-6xl font-semibold text-center text-black'>Why use Ticket Tailor?</h1>
       <div className="flex flex-col lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto shadow overflow-hidden mt-2">
         {items.map((item) => {
           return (
@@ -49,7 +49,7 @@ const Panel = ({ open, setOpen, id, Icon, title, imgSrc, description }) => {
           {title}
         </span>
         <span className="block lg:hidden text-xl font-light">{title}</span>
-        <div className="w-6 lg:w-full aspect-square bg-indigo-600 text-white grid place-items-center">
+        <div className="w-6 lg:w-full aspect-square bg-gray-300 text-white grid place-items-center">
           <Icon />
         </div>
         <span className="w-4 h-4 bg-white group-hover:bg-slate-50 transition-colors border-r-[1px] border-b-[1px] lg:border-b-0 lg:border-t-[1px] border-slate-200 rotate-45 absolute bottom-0 lg:bottom-[50%] right-[50%] lg:right-0 translate-y-[50%] translate-x-[50%] z-20" />

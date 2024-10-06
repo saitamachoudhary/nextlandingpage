@@ -22,7 +22,7 @@ const StatsSection = () => {
         </div>
       </div>
 
-      <button className="mt-10 px-6 py-3 text-lg font-semibold text-white bg-[#9333EA] rounded-full hover:bg-purple-900 transition duration-300">
+      <button className="mt-10 px-6 py-3 text-lg font-semibold text-black bg-white border-2 border-black rounded-full hover:bg-gray-400 hover:text-white hover:border-white transition duration-300">
         Launch your next event
       </button>
     </div>

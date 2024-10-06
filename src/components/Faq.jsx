@@ -42,7 +42,7 @@ const Faq = () => {
             className="flex justify-between items-center cursor-pointer py-4"
             onClick={() => toggle(index)}
           >
-            <h2 className={`font-semibold text-lg ${selected === index ? "text-purple-600" : "text-gray-900"}`}>
+            <h2 className={`font-semibold text-lg ${selected === index ? "text-gray-400" : "text-gray-900"}`}>
               {faq.question}
             </h2>
             <span className={`${selected === index ? "rotate-180" : ""} transition-transform duration-300`}>

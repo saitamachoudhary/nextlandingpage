@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="text-center lg:text-left">
             <p className="text-sm">
               © BOOM Events 2024
-              <a href="/terms" className="ml-4 text-purple-600 hover:underline">
+              <a href="/terms" className="ml-4  hover:underline">
                 Terms & Conditions
               </a>
             </p>
@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Middle Section - Links */}
           <div className="flex flex-wrap justify-center lg:justify-start space-x-4">
             {['Contact', 'Blog', 'Podcast', 'Pricing', 'Brand logos', 'FAQ', 'More'].map((item, index) => (
-              <a key={index} href={`/${item.toLowerCase()}`} className="text-gray-800 hover:text-purple-600">
+              <a key={index} href={`/${item.toLowerCase()}`} className="text-gray-800 hover:text-text-gray-400">
                 {item}
               </a>
             ))}

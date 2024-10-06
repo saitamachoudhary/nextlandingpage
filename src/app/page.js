@@ -11,6 +11,8 @@ import Logos from "@/components/Logos";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Form from "@/components/Form";
+import EventCatagories from "@/components/EventCatagories";
+import PromotionSection from "@/components/PromotionSection";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -28,7 +30,9 @@ export default function Home() {
      <Herosection/>
      <Logos/>
      <StatsSection/>
-     <OurMenu/>
+     <EventCatagories/>
+     {/* <OurMenu/> */}
+     {/* <PromotionSection/> */}
      <TestimonialSection/>
      <VerticalAccordion/>
      <Faq/>

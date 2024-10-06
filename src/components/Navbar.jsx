@@ -5,18 +5,18 @@ const Navbar = ({OpenLoginmodal}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r from-purple-200 via-white to-white px-4 py-2">
+    <nav className="bg-gradient-to-r from-gray-400 via-white to-white px-4 py-2">
       <div className="container mx-auto flex justify-between items-center md:gap-5">
         <div className="font-bold text-2xl">
           <span className="text-black">BOOM events</span> 
         </div>
 
         <ul className="hidden md:flex space-x-6">
-          <li><a href="#home" className="text-black hover:text-purple-600">Home</a></li>
-          <li><a href="#pricing" className="text-black hover:text-purple-600">Pricing</a></li>
-          <li><a href="#contact" className="text-black hover:text-purple-600">Contact</a></li>
-          <li><a href="#blog" className="text-black hover:text-purple-600">Blog</a></li>
-          <li><a href="#marketing" className="text-black hover:text-purple-600">Marketing</a></li>
+          <li><a href="#home" className="text-black hover:text-gray-400">Home</a></li>
+          <li><a href="#pricing" className="text-black hover:text-gray-400">Pricing</a></li>
+          <li><a href="#contact" className="text-black hover:text-gray-400">Contact</a></li>
+          <li><a href="#blog" className="text-black hover:text-gray-400">Blog</a></li>
+          <li><a href="#marketing" className="text-black hover:text-gray-400">Marketing</a></li>
         </ul>
 
         <div className="hidden md:flex items-center space-x-6">
@@ -25,7 +25,7 @@ const Navbar = ({OpenLoginmodal}) => {
             <span className="ml-1">▼</span>
           </div>
           <a href="#login" className="text-black" onClick={OpenLoginmodal}>Log in</a>
-          <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">Start for FREE</button>
+          <button className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition">Start for FREE</button>
         </div>
 
         <div className="md:hidden flex items-center">
