@@ -21,14 +21,14 @@ const TestimonialSection = () => {
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
-        navigation
+        // navigation
         // pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop
       >
         {testimonialData.map((testimonial) => (
           <SwiperSlide key={testimonial.id}>
-            <div className="bg-black text-white p-6 rounded-lg max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+            <div className="bg-black text-white p-6 rounded-lg max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
               {/* Left section with text */}
               <div className="md:w-1/2 space-y-4">
                 <h2 className="text-2xl md:text-4xl font-bold">{testimonial.title}</h2>

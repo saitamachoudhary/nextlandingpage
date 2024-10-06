@@ -40,11 +40,11 @@ const Navbar = ({OpenLoginmodal}) => {
       {isOpen && (
         <div className="md:hidden">
           <ul className="flex flex-col space-y-4 mt-4">
-            <li><a href="#home" className="block text-black hover:text-purple-600">Home</a></li>
-            <li><a href="#pricing" className="block text-black hover:text-purple-600">Pricing</a></li>
-            <li><a href="#contact" className="block text-black hover:text-purple-600">Contact</a></li>
-            <li><a href="#blog" className="block text-black hover:text-purple-600">Blog</a></li>
-            <li><a href="#marketing" className="block text-black hover:text-purple-600">Marketing</a></li>
+            <li><a href="#home" className="block text-black hover:text-white">Home</a></li>
+            <li><a href="#pricing" className="block text-black hover:text-white">Pricing</a></li>
+            <li><a href="#contact" className="block text-black hover:text-white">Contact</a></li>
+            <li><a href="#blog" className="block text-black hover:text-white">Blog</a></li>
+            <li><a href="#marketing" className="block text-black hover:text-white">Marketing</a></li>
           </ul>
 
           <div className="flex flex-col space-y-4 mt-4 items-start">
@@ -53,7 +53,7 @@ const Navbar = ({OpenLoginmodal}) => {
               <span className="ml-1">▼</span>
             </div>
             <a href="#login" className="text-black">Log in</a>
-            <button className="bg-purple-600 text-white px-4 py-2 rounded-lg w-full">Start for FREE</button>
+            <button className="bg-black text-white px-4 py-2 rounded-lg w-full">Start for FREE</button>
           </div>
         </div>
       )}
