@@ -13,6 +13,7 @@ import Navbar from "@/components/Navbar";
 import Form from "@/components/Form";
 import EventCatagories from "@/components/EventCatagories";
 import PromotionSection from "@/components/PromotionSection";
+import Features from "@/components/Features";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -27,12 +28,13 @@ export default function Home() {
      <Navbar OpenLoginmodal={OpenLoginmodal}/>
      {open?
       <Form CloseLoginmodal={CloseLoginmodal}/>:null}
+     <PromotionSection/>
      <Herosection/>
      <Logos/>
      <StatsSection/>
      <EventCatagories/>
      {/* <OurMenu/> */}
-     {/* <PromotionSection/> */}
+     <Features/>
      <TestimonialSection/>
      <VerticalAccordion/>
      <Faq/>
